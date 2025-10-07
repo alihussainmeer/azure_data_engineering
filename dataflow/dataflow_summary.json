@@ -150,14 +150,24 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          FiscalYear,",
+				"          AgencyName,",
+				"          TotalPaid = sum_total_paid",
+				"     )) ~> sink1",
 				"aggregateData sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sinkADLAggregate"
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          AgencyName,",
+				"          FiscalYear,",
+				"          sum_total_paid",
+				"     )) ~> sinkADLAggregate"
 			]
 		}
 	}
