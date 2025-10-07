@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "payroll-nyc-ali"
+		},
+		"ls_adl_nycpayroll_data_accountKey": {
+			"value": ""
+		},
+		"ls_sql_nycpayroll_password": {
+			"value": ""
+		},
+		"ls_adl_nycpayroll_data_properties_typeProperties_url": {
+			"value": "https://adlsnycpayrollalim.dfs.core.windows.net/"
+		},
+		"ls_sql_nycpayroll_properties_typeProperties_server": {
+			"value": "tcp:payroll-nyc.database.windows.net,1433"
+		},
+		"ls_sql_nycpayroll_properties_typeProperties_database": {
+			"value": "db_nycpayroll"
+		},
+		"ls_sql_nycpayroll_properties_typeProperties_userName": {
+			"value": "payrollnyc"
+		}
+	}
+}
