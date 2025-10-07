@@ -1,0 +1,9 @@
+{
+	"name": "payroll-nyc-ali",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "17555092-2923-4078-9ff8-4dbc9f4f0e8c",
+		"tenantId": "f958e84a-92b8-439f-a62d-4f45996b6d07"
+	}
+}
